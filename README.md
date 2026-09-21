@@ -1,4 +1,4 @@
-#Master’s Degree Projects
+# Master’s Degree Projects
 
 This page summarizes the code and project stories from the six projects I conducted during my master’s degree program from September 1, 2024 to August 31, 2026.
 
