@@ -17,6 +17,10 @@ The project repositories are listed below:
 6. https://github.com/AiJayce/Soongsil.Univ/tree/Colorectal-Cancer
 
 
+Each project branch contains a brief introduction to the project and the raw code used for the analysis.
+
+Please note that the data analysis was performed using locally downloaded datasets rather than directly from URLs.
+Therefore, the directory paths specified in the code use absolute paths.
 
 
 
