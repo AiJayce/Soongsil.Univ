@@ -24,6 +24,20 @@ Residual =< 0.602 (quantile 75%)
 
 ![Linear regressor modeling and validation](assets/04-validation.png)
 
+## Discussion
+
+### Data and analysis context
+
+This project used bulk RNA-seq read-count data collected across multiple time points and processed with DESeq2. Pearson correlation, eigenvalue structure, and PCA were used to evaluate temporal organization before fitting gene-wise linear models. The resulting positive- and negative-slope gene sets were tested with pathway enrichment.
+
+### Interpretation
+
+The approach treats aging-associated expression change as a temporal trajectory rather than a collection of independent pairwise contrasts. Genes with low regression residuals were retained as reliable linear trends, and the two slope directions separated programs that increased toward aged samples from programs associated with younger samples. Recovery of known immune, inflammation, epigenetic, fertilization, and cell-cycle pathways supported the biological relevance of the gene sets.
+
+### Considerations
+
+Linear modeling is appropriate only when the time points adequately support a linear approximation. Limited time points, batch effects, normalization choices, residual thresholds, and sample-level confounding can influence the selected genes. Nonlinear or transient biological programs may be missed, so independent time-series datasets and nonlinear models would be useful for further validation.
+
 
 
 
