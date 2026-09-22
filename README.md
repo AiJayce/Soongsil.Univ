@@ -11,7 +11,9 @@ The tumor microenvironment (TME) is highly heterogeneous, making marker-based an
 <img width="3118" height="1222" alt="Developing a TME immune cell annotation tool-1" src="https://github.com/user-attachments/assets/a0f1e347-aebf-4a9d-a9f1-40145e2b3b49" />
 
 Step1 : Collect training data : Query Sorting scRNA dataset from GEO (GSM3272967)
+
 Step2 : Build Feature : Before training, perform EDA to identify and construct the optimal training features.
+
 Step3 : Training and validation (Confusion matrix, ROC AUC curve)
 
 ### code : https://github.com/AiJayce/Soongsil.Univ/blob/TME-ML-Classifier/Machinelearning.ipynb
