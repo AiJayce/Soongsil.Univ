@@ -22,3 +22,17 @@ The model predictions were further validated through enrichment analysis and the
 
 ![Prediction and validation](assets/03-validation.png)
 
+## Discussion
+
+### Data and analysis context
+
+The workflow used public scRNA-seq datasets, including macrophage reference data, to construct an expression-based training set. Feature distributions were evaluated before fitting an ensemble Random Forest classifier. The model was then applied to human TME single-cell data and assessed with UMAP, score distributions, marker genes, and pathway-enrichment results.
+
+### Interpretation
+
+The classifier separated M0, M1, and M2-like myeloid states and transferred the learned expression features to human single-cell data. Feature importance, confusion matrices, and ROC-AUC curves provided model-level support, while enrichment analysis and marker-gene patterns supplied biological support for the predicted labels.
+
+### Considerations
+
+The predictions depend on the quality, species composition, label definitions, and batch compatibility of the public training datasets. M0, M1, and M2 should be interpreted as transcriptional states rather than fully discrete biological cell types. Independent datasets, held-out samples, and experimental validation are needed to assess generalization and causal relevance.
+
