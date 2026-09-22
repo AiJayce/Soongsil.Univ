@@ -1,8 +1,8 @@
 # Implantation Failure in Uterine Aging
 
-## Overview
+## Objective
 
-This project investigates transcriptomic mechanisms underlying implantation failure in the aged uterus. It identifies an aging-associated transition from a receptive endometrial network to a non-receptive, mucin-overexpression network driven by senescent immune-cell interactions.
+Determine how uterine aging produces a non-receptive endometrial state and recurrent implantation failure, focusing on senescent CD8 T-cell signaling and mucin overexpression.
 
 ![Implantation failure and senescent CD8 T-cell cause inference](assets/01-implantation-problem.png)
 
@@ -10,29 +10,29 @@ This project investigates transcriptomic mechanisms underlying implantation fail
 
 ### 1. Define receptive and non-receptive endometrial networks
 
-Gene regulatory network modules were built from luminal epithelial scRNA-seq data. Hierarchical clustering separated receptive and non-receptive networks, with mucin genes enriched in the non-receptive modules.
+Luminal epithelial scRNA-seq profiles were grouped into regulatory modules. The figure separates a receptive network from a non-receptive network; mucin-associated genes are concentrated in the latter.
 
 ![Luminal epithelial receptive and non-receptive network modules](assets/02-network-modules.png)
 
 ### 2. Classify network states and prioritize transition factors
 
-The same ensemble Random Forest classifier was used to annotate regulatory modules and assess feature importance. Non-receptive modules were predominantly enriched in aged uterus samples.
+The shared ensemble Random Forest model classifies the two network modules. Its feature-importance and ROC-AUC panels support the separation, and the age-composition bar plot shows that the non-receptive module is enriched in aged uterus samples.
 
 ![Ensemble Random Forest classification of regulatory modules](assets/03-random-forest-classifier.png)
 
-TENET was then applied to a trajectory from receptive to non-receptive epithelial states. Transcription factors regulating the transition were prioritized with graph-theoretic criteria, identifying Mxd1 as a candidate regulator of the mucin-associated program.
+TENET models the trajectory from receptive to non-receptive cells, reconstructs the transition network, and ranks regulators by graph metrics. Mxd1 is prioritized as a candidate driver of the mucin-associated transition.
 
 ![TENET trajectory, network inference, and Mxd1 prioritization](assets/04-tenet-transition-factors.png)
 
 ### 3. Infer immune-to-epithelial signaling
 
-NicheNet analysis identified CD8 T-cell-mediated signals associated with transcription-factor upregulation in luminal epithelial receiver cells. These interactions support a model in which senescent immune signaling promotes the non-receptive state.
+The NicheNet network traces CD8 T-cell ligands, including S100a8, to luminal epithelial receptor pathways and Mxd1 activation. This connects senescent immune signaling to the non-receptive epithelial program.
 
 ![NicheNet inference of CD8 T-cell to luminal epithelial signaling](assets/05-nichenet-cci.png)
 
 ### 4. Validate across spatial and epigenomic data
 
-Spatial transcriptomics identified aged samples enriched for receiver cells with elevated transition-factor and mucin expression. ATAC-seq peak calling and HOMER motif enrichment supported accessible regulatory regions and transcription-factor binding at mucin loci.
+The spatial figure stratifies spots by local CD8 T-cell and epithelial-signal correlation; high-correlation spots show higher Muc4 expression and senescence-associated signals. The ATAC-seq figure then shows accessible peaks, an Mxd1 motif, and putative enhancer locations at the Muc4 locus, providing epigenomic support for the proposed mechanism.
 
 ![Spatial validation of senescent-cell interactions and Muc4 expression](assets/06-spatial-validation.png)
 
