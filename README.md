@@ -1,33 +1,35 @@
-# Immune Evasion in Colorectal Cancer
+<img width="2153" height="633" alt="Immune Evasion in Colorectal Cancer-2" src="https://github.com/user-attachments/assets/c93b3148-d254-45ed-8fae-e78c80aa3a0f" /># Immune Evasion in Colorectal Cancer
 
 ## (1) Introduction
 
+<img width="1098" height="964" alt="41568_2024_715_Fig2_HTML" src="https://github.com/user-attachments/assets/b67e4073-581e-4d81-9ec4-8d7cb34ba426" />
+
 Immune checkpoint inhibitors (ICIs) have shown limited efficacy in MSS colorectal cancer, highlighting an urgent need to uncover the mechanisms of immune evasion. This project identified a TP53 loss-driven CEBPB signaling axis that promotes immune evasion by inducing CTLA4 upregulation in T cells, providing mechanistic insights into immunotherapy resistance and suggesting potential targeted therapeutic strategies for colorectal cancer.
 
-**Keyword:** scRNA seq, TCR clonal expansion, Bulk RNA seq, Spatial transcriptomics, GMM, TCGA, Cancer genome
+## (2) Basic Analysis Pipeline
 
-![Single-cell immune-profiling workflow](assets/01-scrna-pipeline.png)
+<img width="3224" height="1287" alt="Immune Evasion in Colorectal Cancer-1" src="https://github.com/user-attachments/assets/6ab430ae-afc5-4ee9-adba-193521e936f4" />
 
-## (2) ChIP-seq analysis and (3) miRNA analysis
+The basic analysis pipeline was performed using the Seurat pipeline in R. A positive correlation was observed between high CEBPB expression in epithelial cells and increased CTLA4 expression in the T-cell population. This finding suggests that elevated CEBPB transcription factor activity may contribute to CD4 T-cell exhaustion, potentially enabling immune checkpoint inhibitor (ICI) evasion.
 
-To validate the proposed CEBPB-CTLA4 regulatory relationship, I performed p53 target ChIP-seq analysis, which showed stronger p53 binding in TP53-mutant SW480 cells and supported the scRNA-seq findings.
 
-Cell line - SW480 (p53 Mutation)  
-Cell line - HCT116 (p53 Wildtype)
+## (3) ChIP-seq analysis
 
-To identify factors that may disrupt the proposed CEBPB-CTLA4 regulatory axis, I analyzed miRNAs potentially involved in CEBPB-mediated CTLA4 regulation under TP53-mutant conditions. Differential expression analysis identified TP53 mutation-specific miRNAs, highlighting candidate post-transcriptional regulators of the transcription factor gene regulatory network (GRN).
+<img width="2153" height="633" alt="Immune Evasion in Colorectal Cancer-2" src="https://github.com/user-attachments/assets/a84fc2be-e477-4def-8b9a-8ca42aca0c9b" />
 
-**Keyword:** ChIP seq, Mutation analysis, Peak calling, Motif analysis (Homer), Public data, Cancer genome, Validation, miRNA, edgeR
+To validate the proposed CEBPB–CTLA4 regulatory relationship, I performed p53 target ChIP-seq analysis, which showed stronger p53 binding in TP53-mutant SW480 cells and supported the scRNA-seq findings.
 
-![ChIP-seq comparison of TP53-mutant and TP53-wild-type cell lines](assets/02-chip-seq.png)
+## (4) miRNA analysis
+
+<img width="2068" height="1247" alt="Immune Evasion in Colorectal Cancer-3" src="https://github.com/user-attachments/assets/3025ddc4-e35c-4b66-8ea0-a9778750ad35" />
+
+To identify factors that may disrupt the proposed CEBPB–CTLA4 regulatory axis, I analyzed miRNAs potentially involved in CEBPB-mediated CTLA4 regulation under TP53-mutant conditions. Differential expression analysis identified TP53 mutation-specific miRNAs, highlighting candidate post-transcriptional regulators of the transcription factor gene regulatory network (GRN).
 
 ## (4) Spatial Spot-level coexpression
 
+<img width="3224" height="1184" alt="Immune Evasion in Colorectal Cancer-4" src="https://github.com/user-attachments/assets/4fea96c7-d5a5-4467-a054-dfef030d1775" />
+
 I investigated whether the regulatory relationship identified in the scRNA-seq analysis could be reproduced in spatial transcriptomics data. Pseudo-spots were defined by aggregating each spot with its 1-layer neighboring spots to represent the local spatial microenvironment. A sliding window algorithm was then applied to calculate the summed expression values for each pseudo-spot across the tissue, and Pearson correlation analysis demonstrated a significant spatial correlation between CEBPB and CTLA4, providing additional evidence supporting the robustness of the scRNA-seq findings.
-
-**Keyword:** Spatial transcriptomics, 10X Visium, Sliding window algorithm, Public data, Validation, Co-expression
-
-![Spatial pseudo-spot coexpression analysis of CEBPB and CTLA4](assets/04-spatial-coexpression.png)
 
 ## Discussion
 
