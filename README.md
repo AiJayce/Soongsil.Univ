@@ -34,6 +34,8 @@ To identify factors that may disrupt the proposed CEBPB–CTLA4 regulatory axis,
 
 I investigated whether the regulatory relationship identified in the scRNA-seq analysis could be reproduced in spatial transcriptomics data. Pseudo-spots were defined by aggregating each spot with its 1-layer neighboring spots to represent the local spatial microenvironment. A sliding window algorithm was then applied to calculate the summed expression values for each pseudo-spot across the tissue, and Pearson correlation analysis demonstrated a significant spatial correlation between CEBPB and CTLA4, providing additional evidence supporting the robustness of the scRNA-seq findings.
 
+### code : https://github.com/AiJayce/Soongsil.Univ/blob/Colorectal-Cancer/CRC%20-%201/CRC%20bulk%20spot.ipynb
+
 ## Discussion
 
 ### Data and analysis context
