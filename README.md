@@ -53,6 +53,8 @@ To support the regulatory mechanism identified by scRNA-seq analysis, ATAC-seq p
 
 ### code : https://github.com/AiJayce/Soongsil.Univ/blob/Uterus-Aging/Oval%20-%20Mouse/Binding%20region.R
 
+## Discussion
+
 ### Data and analysis context
 
 This project integrated luminal epithelial scRNA-seq, spatial transcriptomics, ATAC-seq, and public reference data. scWGCNA and trajectory analysis defined receptive and non-receptive regulatory states, the ensemble Random Forest classifier annotated network modules, and TENET prioritized transcription factors involved in the transition. NicheNet was used to investigate CD8 T-cell to epithelial communication.
