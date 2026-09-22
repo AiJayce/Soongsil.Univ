@@ -51,6 +51,8 @@ Spatial transcriptomic analysis showed that receptor cells interacting with CD8 
 
 To support the regulatory mechanism identified by scRNA-seq analysis, ATAC-seq peak analysis revealed accessible regulatory regions associated with the key transcription factor at mucin genes, while motif enrichment analysis provided statistical evidence for its binding to these regulatory regions.
 
+### code : https://github.com/AiJayce/Soongsil.Univ/blob/Uterus-Aging/Oval%20-%20Mouse/Binding%20region.R
+
 ### Data and analysis context
 
 This project integrated luminal epithelial scRNA-seq, spatial transcriptomics, ATAC-seq, and public reference data. scWGCNA and trajectory analysis defined receptive and non-receptive regulatory states, the ensemble Random Forest classifier annotated network modules, and TENET prioritized transcription factors involved in the transition. NicheNet was used to investigate CD8 T-cell to epithelial communication.
