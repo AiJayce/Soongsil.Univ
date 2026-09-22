@@ -14,8 +14,7 @@ Macrophages are highly heterogeneous in the TME, making accurate annotation chal
 
 ## (2) Annotation Validation
 
-
-<img width="3118" height="1222" alt="Developing a TME immune cell annotation tool-1" src="https://github.com/user-attachments/assets/a0f1e347-aebf-4a9d-a9f1-40145e2b3b49" />
+<img width="1221" height="1186" alt="3" src="https://github.com/user-attachments/assets/0265886b-3df2-4d46-9c3c-f5fdc81bfe92" />
 
 Classification was validated using marker-based analysis. Since the training data were FACS-sorted, they provided reliable M1 and M2 labels. The classified populations showed consistent trends in both marker expression and module scores, supporting the validity of the classification.
 
