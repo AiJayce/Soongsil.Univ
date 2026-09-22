@@ -10,7 +10,7 @@ Identify the hippocampal region and cell program most vulnerable to Alzheimer's 
 
 The first figure defines the posterior hippocampus (pHPC; emotional and contextual processing) and anterior hippocampus (aHPC; spatial and episodic memory). The second figure maps spatial cells to an Allen Mouse Brain Atlas scRNA-seq reference and to CCF regions, creating comparable pHPC and aHPC regions in AD and wild-type samples.
 
-![Posterior and anterior hippocampal regional functions](assets/01-regional-functions.png)
+![Posterior and anterior hippocampal regional functions](assets/01-regional-functions.png) ![Reference label transfer and CCF mapping](assets/02-label-transfer-ccf.png)
 
 ![Reference label transfer and CCF mapping](assets/02-label-transfer-ccf.png)
 
