@@ -6,8 +6,6 @@ I elucidated the transcriptomic mechanisms underlying implantation failure in th
 
 **Keyword:** scRNA seq, Scanpy, HI-C, ML/DL, Spatial transcriptomics, ATAC, Epigenomics, Public data
 
-![Implantation failure and senescent CD8 T-cell cause inference](assets/01-implantation-problem.png)
-
 ![Introduction: implantation failure and cause inference](assets/01-implantation-problem.png)
 
 ## (2) Build GRN, (3) Module annotation by ML, and (4) Network Transition TFs
