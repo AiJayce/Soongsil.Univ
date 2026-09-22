@@ -29,4 +29,18 @@ I investigated whether the regulatory relationship identified in the scRNA-seq a
 
 ![Spatial pseudo-spot coexpression analysis of CEBPB and CTLA4](assets/04-spatial-coexpression.png)
 
+## Discussion
+
+### Data and analysis context
+
+The project integrated colorectal cancer scRNA-seq, TCR clonotype data, bulk RNA-seq, cancer-genome information, p53 ChIP-seq, miRNA sequencing, and 10x Visium spatial transcriptomics. These complementary data types were used to move from immune-cell profiling to regulatory validation and spatial confirmation.
+
+### Interpretation
+
+The single-cell analysis nominated a TP53 loss-associated CEBPB-CTLA4 axis linked to T-cell immune evasion. ChIP-seq supported the TP53-dependent regulatory context, miRNA analysis identified candidate post-transcriptional regulators, and spatial pseudo-spot analysis reproduced positive CEBPB-CTLA4 coexpression across samples.
+
+### Considerations
+
+The analyses provide convergent evidence but do not by themselves establish that the CEBPB-CTLA4 relationship is causal. Differences among cell lines, public datasets, sequencing platforms, and spatial resolution may affect reproducibility. Perturbation of TP53, CEBPB, or CTLA4 in matched experimental systems would be needed to test the proposed mechanism directly.
+
 
