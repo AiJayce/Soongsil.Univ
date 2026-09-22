@@ -46,13 +46,15 @@ In this project, I observed macrophage dynamics driven by CAF interactions in th
 
 ### Data and analysis context
 
-The workflow used public scRNA-seq datasets, including macrophage reference data, to construct an expression-based training set. Feature distributions were evaluated before fitting an ensemble Random Forest classifier. The model was then applied to human TME single-cell data and assessed with UMAP, score distributions, marker genes, and pathway-enrichment results.
+Public scRNA-seq datasets, including FACS-sorted macrophage reference data, were used to construct an expression-based training set for M0, M1, and M2-like macrophage classification. An ensemble Random Forest classifier was trained on the gene expression features and applied to human gastric cancer TME scRNA-seq data. The predicted states were evaluated using UMAP, score distributions, marker gene expression, module scores, and pathway-enrichment analysis. CellChat, pySCENIC, and Monocle were subsequently used to investigate CAF–macrophage interactions, transcriptional regulation, and macrophage state transitions.
 
 ### Interpretation
 
-The classifier separated M0, M1, and M2-like myeloid states and transferred the learned expression features to human single-cell data. Feature importance, confusion matrices, and ROC-AUC curves provided model-level support, while enrichment analysis and marker-gene patterns supplied biological support for the predicted labels.
+The classifier distinguished M0, M1, and M2-like macrophage states and transferred the learned transcriptional features to human gastric cancer TME data. Marker genes, module scores, and pathway-enrichment patterns supported the biological characteristics of the predicted states. CellChat identified ECM-rich fibroblasts as a major interacting CAF subtype and revealed active CSF1–CSF1R signaling toward macrophages. Integration with pySCENIC and pseudotime analysis suggested a potential CSF1–CSF1R–STAT3-mediated regulatory mechanism associated with M1-to-M2-like repolarization.
 
 ### Considerations
+
+The predicted macrophage states depend on the quality, species composition, label definitions, and batch compatibility of the public training datasets. M0, M1, and M2-like states should be interpreted as transcriptional states rather than fully discrete biological cell types. Although the integrated CellChat, pySCENIC, and pseudotime analyses support a potential CSF1–CSF1R–STAT3-mediated transition, these findings represent computational associations and do not establish causality. Independent datasets and experimental validation are required to confirm the proposed mechanism and its relevance to cold tumor formation.
 
 The predictions depend on the quality, species composition, label definitions, and batch compatibility of the public training datasets. M0, M1, and M2 should be interpreted as transcriptional states rather than fully discrete biological cell types. Independent datasets, held-out samples, and experimental validation are needed to assess generalization and causal relevance.
 
