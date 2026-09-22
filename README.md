@@ -2,7 +2,7 @@
 
 This page summarizes the code and project stories from the six projects I conducted during my master’s degree program from September 1, 2024 to August 31, 2026.
 
-Throughout the program, I worked on a total of six projects using R, Python, and Linux.
+Throughout the program, I worked on a total of seven projects using R, Python, and Linux.
 
 The dependencies used across all projects are standardized and documented in the following file:
 https://github.com/AiJayce/Soongsil.Univ/blob/main/dependency.csv
@@ -15,6 +15,7 @@ The project repositories are listed below:
 4. https://github.com/AiJayce/Soongsil.Univ/tree/TME-ML-Classifier
 5. https://github.com/AiJayce/Soongsil.Univ/tree/Uterus-Aging
 6. https://github.com/AiJayce/Soongsil.Univ/tree/Colorectal-Cancer
+7. https://github.com/AiJayce/Soongsil.Univ/tree/Pipeline-of-Time-Series-Pathway-Identification
 
 
 Each project branch contains a brief introduction to the project and the raw code used for the analysis.
