@@ -13,6 +13,7 @@ The hippocampus exhibits distinct functions across its anterior and posterior re
 
 Annotation was performed at two levels: deep learning based scRNA reference label transfer with high-confidence scores, and manual CCF region mapping.
 
+@code : https://github.com/AiJayce/Soongsil.Univ/blob/Alzheimer-Vulnerability/MERSCOPE.ipynb
 
 ## (3) Compare region specific
 
