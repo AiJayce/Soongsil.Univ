@@ -1,5 +1,3 @@
-<img width="2153" height="633" alt="Immune Evasion in Colorectal Cancer-2" src="https://github.com/user-attachments/assets/c93b3148-d254-45ed-8fae-e78c80aa3a0f" /># Immune Evasion in Colorectal Cancer
-
 ## (1) Introduction
 
 <img width="1098" height="964" alt="41568_2024_715_Fig2_HTML" src="https://github.com/user-attachments/assets/b67e4073-581e-4d81-9ec4-8d7cb34ba426" />
