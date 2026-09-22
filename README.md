@@ -5,7 +5,7 @@ This page summarizes the code and project stories from the six projects I conduc
 Throughout the program, I worked on a total of six projects using R, Python, and Linux.
 
 The dependencies used across all projects are standardized and documented in the following file:
-https://github.com/AiJayce/Soongsil.Univ/blob/main/dependency.csv
+https://github.com/AiJayce/Soongsil.Univ/blob/main/DEPENDENCY.csv
 
 The project repositories are listed below:
 
