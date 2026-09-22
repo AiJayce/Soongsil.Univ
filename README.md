@@ -1,28 +1,37 @@
 # Pipeline of Time-Series Pathway Identification
 
-## (1) Introduction and (2) Pipeline
+## (1) Introduction 
+
+<img width="1554" height="1155" alt="Pipeline of Time-Series Pathway Identification-1" src="https://github.com/user-attachments/assets/38e07236-ebf7-42b7-9fef-9b301d1f940c" />
 
 Conventional bulk RNA-seq pathway analysis identifies DEGs through pairwise comparisons (e.g., one-vs-one or one-vs-others), followed by gene set generation and pathway enrichment analysis. However, this approach cannot effectively identify pathways with progressively increasing activity across a time series.
 
-To assess the linearity of the time-series data, I constructed a Pearson correlation matrix and evaluated its eigenvalue structure. PCA further confirmed a clear temporal trajectory, with samples sequentially aligned along the principal components. This supported the use of linear equation-based modeling to characterize the temporal dynamics of the data.
+## (2) Pipeline-1
 
-**Keyword:** Bulk RNAseq, DEG, DESeq2, Pathway enrichment, Linearity, Linear algebra, Public data
+<img width="1554" height="1155" alt="Pipeline of Time-Series Pathway Identification-2" src="https://github.com/user-attachments/assets/2f6dac59-5209-40f0-a1bd-fc4f8613aeab" />
 
-![Volcano plot and conventional pathway analysis limitation](assets/01-conventional-analysis-limitation.png)
+To assess the linearity of the time-series data, I constructed a Pearson correlation matrix and evaluated its eigenvalue structure. PCA further confirmed a clear temporal trajectory, with samples sequentially aligned along the principal components. This supported the use of linear equation–based modeling to characterize the temporal dynamics of the data.
 
-## (3) Pipeline and (4) Validation
+Step1 : Preprocess raw read count
 
-Gene expression was modeled using linear regression across time points, and genes with residuals below the 75 percentile were retained. By modeling positive and negative slopes separately, two temporally linear gene sets were generated, representing progressively upregulated and downregulated genes, respectively.
+Step2 : Assess Time-Series Linearity
+
+### code : https://github.com/AiJayce/Soongsil.Univ/blob/Uterus-Aging/Oval%20-%20Mouse/RNA-seq/class.ipynb
+
+## (3) Pipeline-2
+
+<img width="1622" height="1160" alt="Pipeline of Time-Series Pathway Identification-3" src="https://github.com/user-attachments/assets/6fa027ea-a7ae-4036-980f-489e71dc6b86" />
+
+Gene expression was modeled using linear regression across time points, and genes with residuals below the 75 percentile were retained. 
+By modeling positive and negative slopes separately, two temporally linear gene sets were generated, representing progressively upregulated and downregulated genes, respectively.
+
+### code : https://github.com/AiJayce/Soongsil.Univ/blob/Uterus-Aging/Oval%20-%20Mouse/RNA-seq/class.ipynb
+
+## (4) Validation
+
+<img width="1691" height="1166" alt="Pipeline of Time-Series Pathway Identification-4" src="https://github.com/user-attachments/assets/33463ade-a324-49ff-8c0a-994721cbe4e6" />
 
 The resulting gene sets were validated by calculating pathway enrichment scores and comparing them with previously reported aging-associated pathways. Successful reproduction of known aging-related pathways demonstrated the validity of the proposed approach, supporting a novel methodology for constructing pathways through temporal modeling rather than conventional DEG-based analysis.
-
-Positive slope by time : Young -> Aged pathway  
-Negative slope by time : Young pathway  
-Residual =< 0.602 (quantile 75%)
-
-**Keyword:** Bulk RNAseq, Geneset modeling, Pathway enrichment, Linearity, Linear algebra, Validation
-
-![Linear regressor modeling and validation](assets/04-validation.png)
 
 ## Discussion
 
