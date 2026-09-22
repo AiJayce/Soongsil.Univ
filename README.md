@@ -46,7 +46,7 @@ The density and boxplot figure prioritizes decoded z15 genes. APOE and TREM2 wer
 Nearest-cell regression links local oligodendrocyte density to microglial TREM2/APOE expression. The final figure uses NicheNet and pseudobulk correlation to reproduce ligand-receptor signals regulating this microglial program in scRNA-seq data.
 
 ![Nearest-cell regression for oligodendrocyte-microglia associations](assets/07-neighbor-inference.png)
-![NicheNet and pseudobulk reproducibility analysis](assets/08-cci-reproducibility.png)
+<img width="1111" height="1155" alt="Predicting Hippocampal Regional Vulnerability in AD-8" src="https://github.com/user-attachments/assets/cd77d161-8768-4ce0-b112-2a1adff44ba0" />
 
 
 
