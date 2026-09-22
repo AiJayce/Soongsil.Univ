@@ -1,26 +1,38 @@
-# Master’s Degree Projects
+# Pipeline of Time-Series Pathway Identification
 
-This page summarizes the code and project stories from the six projects I conducted during my master’s degree program from September 1, 2024 to August 31, 2026.
+## Overview
 
-Throughout the program, I worked on a total of six projects using R, Python, and Linux.
+Conventional bulk RNA-seq pathway analysis depends on pairwise differential-expression testing and cannot reliably identify pathways whose activity changes progressively over a time series. This project introduces a temporal modeling pipeline that identifies linearly increasing and decreasing gene programs before pathway enrichment.
 
-The dependencies used across all projects are standardized and documented in the following file:
-https://github.com/AiJayce/Soongsil.Univ/blob/main/dependency.csv
+## Workflow
 
-The project repositories are listed below:
+### 1. Preprocess bulk RNA-seq counts
 
-1. https://github.com/AiJayce/Soongsil.Univ/tree/Gastric-Cancer
-2. https://github.com/AiJayce/Soongsil.Univ/tree/Clear-cell-renal-cell-carcinoma
-3. https://github.com/AiJayce/Soongsil.Univ/tree/Alzheimer-Vulnerability
-4. https://github.com/AiJayce/Soongsil.Univ/tree/TME-ML-Classifier
-5. https://github.com/AiJayce/Soongsil.Univ/tree/Uterus-Aging
-6. https://github.com/AiJayce/Soongsil.Univ/tree/Colorectal-Cancer
+Raw read-count data were processed with DESeq2 to produce normalized expression profiles suitable for time-series modeling.
 
+### 2. Assess time-series linearity
 
-Each project branch contains a brief introduction to the project and the raw code used for the analysis.
+A Pearson sample-correlation matrix and its eigenvalue structure were used to assess whether the samples followed a temporal trajectory. Principal-component analysis confirmed sequential alignment of samples along the temporal progression, supporting linear equation-based modeling.
 
-Please note that the data analysis was performed using locally downloaded datasets rather than directly from URLs.
-Therefore, the directory paths specified in the code use absolute paths.
+### 3. Model temporal gene-expression programs
+
+For each gene, expression was modeled across time points with simple linear regression. Genes with residuals below the 75th percentile were retained as temporally linear genes. Positive and negative slopes were modeled separately to create progressively upregulated and progressively downregulated gene sets.
+
+### 4. Validate pathway-level results
+
+The resulting gene sets were evaluated with enrichment scores and pathway analysis. Their ability to reproduce known aging-associated immune, inflammation, epigenetic-modification, fertilization, and cell-cycle programs supported the temporal-modeling approach.
+
+## Methods
+
+- Bulk RNA-seq preprocessing with DESeq2
+- Pearson correlation and principal-component analysis
+- Simple linear regression and residual filtering
+- Positive- and negative-slope gene-set construction
+- Gene-set enrichment and pathway validation
+
+## Key Finding
+
+Temporal linear modeling recovered biologically relevant age-associated pathways that are difficult to capture with conventional pairwise DEG-based pathway analysis.
 
 
 
