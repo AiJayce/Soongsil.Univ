@@ -6,8 +6,6 @@
 
 The tumor microenvironment (TME) is highly heterogeneous, making marker-based annotation of myeloid cells challenging. To overcome this limitation in scRNA seq, I trained machine learning models on public datasets and successfully annotated heterogeneous myeloid populations, enabling efficient characterization of the immune landscape.
 
-### code : https://github.com/AiJayce/Soongsil.Univ/blob/TME-ML-Classifier/Machinelearning.ipynb
-
 ## (2) Pipeline
 
 <img width="3118" height="1222" alt="Developing a TME immune cell annotation tool-1" src="https://github.com/user-attachments/assets/a0f1e347-aebf-4a9d-a9f1-40145e2b3b49" />
