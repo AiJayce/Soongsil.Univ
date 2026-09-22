@@ -10,12 +10,15 @@ Immune checkpoint inhibitors (ICIs) have shown limited efficacy in MSS colorecta
 
 The basic analysis pipeline was performed using the Seurat pipeline in R. A positive correlation was observed between high CEBPB expression in epithelial cells and increased CTLA4 expression in the T-cell population. This finding suggests that elevated CEBPB transcription factor activity may contribute to CD4 T-cell exhaustion, potentially enabling immune checkpoint inhibitor (ICI) evasion.
 
+### code : https://github.com/AiJayce/Soongsil.Univ/blob/Colorectal-Cancer/CRC%20-%201/Figure1%20Code.R, https://github.com/AiJayce/Soongsil.Univ/blob/Colorectal-Cancer/CRC%20-%201/Figure4%20Code%20scCEBPBCor_GSEA.R
 
 ## (3) ChIP-seq analysis
 
 <img width="2153" height="633" alt="Immune Evasion in Colorectal Cancer-2" src="https://github.com/user-attachments/assets/a84fc2be-e477-4def-8b9a-8ca42aca0c9b" />
 
 To validate the proposed CEBPB–CTLA4 regulatory relationship, I performed p53 target ChIP-seq analysis, which showed stronger p53 binding in TP53-mutant SW480 cells and supported the scRNA-seq findings.
+
+### code : https://github.com/AiJayce/Soongsil.Univ/blob/Colorectal-Cancer/CRC%20-%201/HCT116.R
 
 ## (4) miRNA analysis
 
