@@ -13,7 +13,7 @@ I elucidated the transcriptomic mechanisms underlying implantation failure in th
 
 Hierarchical clustering of gene regulatory network modules derived from scRNA-seq analysis revealed distinct receptive and non-receptive endometrial states, with mucin genes enriched in the non-receptive modules.
 
-### code : https://github.com/AiJayce/Soongsil.Univ/blob/Uterus-Aging/Oval%20-%20Mouse/Uterus_Epithelial.ipynb
+### code : https://github.com/AiJayce/Soongsil.Univ/blob/Uterus-Aging/Oval%20-%20Mouse/Uterus_Epithelial.ipynb, https://github.com/AiJayce/Soongsil.Univ/blob/Uterus-Aging/Oval%20-%20Mouse/scWGCNA.R
 
 ## (3) Module annotation by ML
 
