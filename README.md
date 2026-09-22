@@ -23,6 +23,8 @@ To validate the proposed CEBPB–CTLA4 regulatory relationship, I performed p53 
 
 To identify factors that may disrupt the proposed CEBPB–CTLA4 regulatory axis, I analyzed miRNAs potentially involved in CEBPB-mediated CTLA4 regulation under TP53-mutant conditions. Differential expression analysis identified TP53 mutation-specific miRNAs, highlighting candidate post-transcriptional regulators of the transcription factor gene regulatory network (GRN).
 
+### code : https://github.com/AiJayce/Soongsil.Univ/blob/Colorectal-Cancer/CRC%20-%202/miRNA.ipynb
+
 ## (4) Spatial Spot-level coexpression
 
 <img width="3224" height="1184" alt="Immune Evasion in Colorectal Cancer-4" src="https://github.com/user-attachments/assets/4fea96c7-d5a5-4467-a054-dfef030d1775" />
