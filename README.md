@@ -32,3 +32,17 @@ To support the regulatory mechanism identified by scRNA-seq analysis, ATAC-seq p
 
 ![Spatial transcriptomic validation](assets/06-spatial-validation.png)
 
+## Discussion
+
+### Data and analysis context
+
+This project integrated luminal epithelial scRNA-seq, spatial transcriptomics, ATAC-seq, and public reference data. scWGCNA and trajectory analysis defined receptive and non-receptive regulatory states, the ensemble Random Forest classifier annotated network modules, and TENET prioritized transcription factors involved in the transition. NicheNet was used to investigate CD8 T-cell to epithelial communication.
+
+### Interpretation
+
+The results support a model in which uterine aging is associated with a shift toward a mucin-overexpression, non-receptive epithelial network. CD8 T-cell-mediated signals were associated with transcription-factor upregulation in luminal epithelial cells, while spatial data linked high interaction states with increased mucin expression. ATAC-seq peaks and HOMER motif enrichment provided epigenomic support for regulatory activity at mucin-associated loci.
+
+### Considerations
+
+Network modules, pseudotime, NicheNet communication scores, and spatial correlations are inferential rather than direct measurements of causality. The proposed transition should therefore be tested with perturbation experiments, independent uterine-aging cohorts, and functional implantation assays.
+
