@@ -1,9 +1,9 @@
 # Predicting Hippocampal Regional Vulnerability in Alzheimer's Disease
 
 
-<img width="500" height="550" alt="Predicting Hippocampal Regional Vulnerability in AD-1" src="https://github.com/user-attachments/assets/2cf32d47-b731-4d70-b512-e799c5c19b7c" />
-
 ## (1) Introduction
+
+<img width="500" height="550" alt="Predicting Hippocampal Regional Vulnerability in AD-1" src="https://github.com/user-attachments/assets/2cf32d47-b731-4d70-b512-e799c5c19b7c" />
 
 The hippocampus exhibits distinct functions across its anterior and posterior regions. This project inferred which region is more vulnerable to AD-related functional loss.
 
