@@ -27,7 +27,7 @@ Hierarchical clustering of gene regulatory network modules derived from scRNA-se
 
 TENET was used to identify transcription factors driving the network transition toward the non-receptive state, suggesting that aging enhances their regulatory activity. Based on the same regulatory transition, key TFs were further prioritized using three graph-theoretic criteria.
 
-### code : https://github.com/AiJayce/Soongsil.Univ/blob/Uterus-Aging/Oval%20-%20Mouse/Uterus_Epithelial.ipynb
+### code : https://github.com/AiJayce/Soongsil.Univ/blob/Uterus-Aging/Oval%20-%20Mouse/Uterus_Epithelial.ipynb, https://github.com/AiJayce/Soongsil.Univ/blob/Uterus-Aging/Oval%20-%20Mouse/Cell%20oracle.ipynb
 
 ## (5) CCI - Nichnetwork analysis
 
@@ -35,9 +35,9 @@ TENET was used to identify transcription factors driving the network transition 
 
 I identified that CD8 T cell mediated cell–cell interactions induce the upregulation of transcription factors in receptor (Luminal epithelial) cells, thereby promoting the transition to the non-receptive transcriptional network.
 
-### code : https://github.com/AiJayce/Soongsil.Univ/blob/Uterus-Aging/Oval%20-%20Mouse/Uterus_Epithelial.ipynb
+### code : https://github.com/AiJayce/Soongsil.Univ/blob/Uterus-Aging/Oval%20-%20Mouse/Uterus_Epithelial.ipynb, https://github.com/AiJayce/Soongsil.Univ/blob/Uterus-Aging/Oval%20-%20Mouse/nichenet-1.R, https://github.com/AiJayce/Soongsil.Univ/blob/Uterus-Aging/Oval%20-%20Mouse/nichenet-2.R, https://github.com/AiJayce/Soongsil.Univ/blob/Uterus-Aging/Oval%20-%20Mouse/nichenet-3_LRnetwork.R
 
-(6) Validation - Spatial transcript,
+(6) Validation - Spatial transcript
 
 <img width="1054" height="1117" alt="Implantation Failure in Uterine Aging-6" src="https://github.com/user-attachments/assets/6039bb7a-49a3-49e1-a50a-4e3b0421dcf0" />
 
