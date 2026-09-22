@@ -43,4 +43,6 @@ The single-cell analysis nominated a TP53 loss-associated CEBPB-CTLA4 axis linke
 
 The analyses provide convergent evidence but do not by themselves establish that the CEBPB-CTLA4 relationship is causal. Differences among cell lines, public datasets, sequencing platforms, and spatial resolution may affect reproducibility. Perturbation of TP53, CEBPB, or CTLA4 in matched experimental systems would be needed to test the proposed mechanism directly.
 
+### Publication
 
+https://spj.science.org/doi/10.34133/cancomm.0013
