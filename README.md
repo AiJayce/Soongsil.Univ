@@ -10,6 +10,8 @@ The tumor microenvironment (TME) is highly heterogeneous, making marker-based an
 
 Public scRNA-seq datasets were collected as training data. Features were constructed from expression programs that distinguish myeloid states, then evaluated for their contribution to classification.
 
+![Training-data collection, feature construction, and ensemble model training](assets/01-training-pipeline.png)
+
 ### 2. Ensemble classification
 
 An ensemble Random Forest classifier was trained using the selected features. Feature importance, confusion matrices, and ROC-AUC curves were used to evaluate the classifier and refine the predictive feature set.
@@ -18,9 +20,13 @@ An ensemble Random Forest classifier was trained using the selected features. Fe
 
 The trained model was applied to human scRNA-seq data to label myeloid populations, including M0, M1, and M2 states. The resulting annotations were evaluated with UMAP structure and marker-gene expression.
 
+![Predicted M0, M1, and M2 myeloid states](assets/02-prediction.png)
+
 ### 4. Biological validation
 
 Predictions were validated through enrichment analysis, pathway activity, and established gene markers. The M1 and M2 assignments showed distinct inflammatory, hypoxia, epithelial-mesenchymal-transition, and interferon-gamma response programs.
+
+![Pathway-enrichment validation of predicted myeloid states](assets/03-validation.png)
 
 ## Methods
 
