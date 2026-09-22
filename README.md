@@ -52,3 +52,18 @@ Linear regression identified a potential causal relationship between higher Olig
 
 At the scRNA-seq level, NicheNet was used to infer ligand–receptor interactions. Pseudobulk analysis confirmed that significant L/R responses regulate TREM2–APOE expression within Microglia, supporting reproducibility.
 
+
+## Discussion
+
+### Data and analysis context
+
+This project integrated MERFISH spatial transcriptomics with a normal hippocampal formation scRNA-seq reference from the Allen Mouse Brain Atlas. Reference label transfer and manual CCF mapping were used to annotate spatial cells and distinguish posterior and anterior hippocampal regions. Plaque size and spatial coordinates were incorporated as metadata for plaque-score modeling.
+
+### Interpretation
+
+The regional comparison suggested increased microglial abundance in AD samples. Conditional VAE latent dimensions captured plaque-associated expression programs, and z15 was interpreted as a plaque-downregulating, inflammation-associated factor. Decoding z15 highlighted lipid metabolism and chronic inflammation, while APOE and TREM2 showed higher expression in the posterior hippocampus. Nearest-cell regression and NicheNet provided complementary evidence for oligodendrocyte-microglia interactions associated with TREM2-APOE regulation.
+
+### Considerations
+
+The regional vulnerability interpretation depends on spatial annotation accuracy, reference-transfer confidence, plaque-score construction, and the observational nature of cell-cell interaction inference. The results support a regional association and a biologically plausible mechanism, but causal validation would require perturbation experiments and independent AD datasets.
+
