@@ -11,6 +11,7 @@ Macrophages in the TME are broadly classified into M1 and M2 states with distinc
 
 Macrophages are highly heterogeneous in the TME, making accurate annotation challenging. Marker-based annotation provides higher resolution but can reduce accuracy, whereas automated annotation improves accuracy at the cost of resolution. To overcome this trade-off, the macrophage classification model developed in a previous project was applied, combining the advantages of both approaches.
 
+### code : https://github.com/AiJayce/Soongsil.Univ/blob/TME-ML-Classifier/GC%20mac%20final.ipynb
 
 ## (2) Annotation Validation
 
@@ -30,17 +31,14 @@ Pathway-based validation further confirmed that the M1 and M2 states were well c
 
 Immune cells in the TME are strongly influenced by surrounding cells. To identify which cells most strongly influence macrophages, cell–cell communication analysis revealed that ECM-rich fibroblasts (ECM-rich FBs), a CAF subtype, showed the strongest interactions with macrophages as ligand-producing cells. Among these interactions, the CSF pathway ranked first on the receptor side.
 
+### code : https://github.com/AiJayce/Soongsil.Univ/blob/Gastric-Cancer/GC%20datamerge.ipynb
+
 ## (4) CSF pathway
 
 <img width="1512" height="1187" alt="6" src="https://github.com/user-attachments/assets/09c86b48-2941-48cc-aea3-380322e35228" />
 
 Previous studies have reported that CSF pathway activation induces STAT3 activation, promoting M1-to-M2 repolarization. 
 In this project, I observed macrophage dynamics driven by CAF interactions in the TME, suggesting that CAF-mediated M1-to-M2 transition may contribute to the development of a cold tumor environment.
-
-### code : https://github.com/AiJayce/Soongsil.Univ/blob/TME-ML-Classifier/Machinelearning.ipynb
-
-## (4) Validation
-
 
 ## Discussion
 
