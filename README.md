@@ -13,7 +13,7 @@ The hippocampus exhibits distinct functions across its anterior and posterior re
 
 Annotation was performed at two levels: deep learning based scRNA reference label transfer with high-confidence scores, and manual CCF region mapping.
 
-@code : https://github.com/AiJayce/Soongsil.Univ/blob/Alzheimer-Vulnerability/MERSCOPE.ipynb
+### code : https://github.com/AiJayce/Soongsil.Univ/blob/Alzheimer-Vulnerability/MERSCOPE.ipynb, https://github.com/AiJayce/Soongsil.Univ/blob/Alzheimer-Vulnerability/CCF_annotation.ipynb
 
 ## (3) Compare region specific
 
@@ -21,11 +21,15 @@ Annotation was performed at two levels: deep learning based scRNA reference labe
 
 Across mapped regions, Microglia showed significantly higher populations in AD samples across all regions, suggesting a disease-associated relationship between Microglia and AD.
 
+### code : https://github.com/AiJayce/Soongsil.Univ/blob/Alzheimer-Vulnerability/MERSCOPE.ipynb
+
 ## (4) VAE modeling 
 
 <img width="1499" height="1155" alt="Predicting Hippocampal Regional Vulnerability in AD-4" src="https://github.com/user-attachments/assets/cfbaaaa0-7d15-49dc-98df-77028bb5e5ed" />
 
 Metadata were used to quantify plaque protein size and spatial coordinates to derive a plaque score. Ridge-regularized multiple linear regression was performed between the plaque score and VAE latent dimensions. Based on this concept, latent dimensions with negative coefficients were interpreted as representing genes associated with both plaque clearance and active inflammatory responses.
+
+### code : https://github.com/AiJayce/Soongsil.Univ/blob/Alzheimer-Vulnerability/MERSCOPE.ipynb
 
 ## (5) Latent decoding to gene sets
 
@@ -33,6 +37,7 @@ Metadata were used to quantify plaque protein size and spatial coordinates to de
 
 Microglia showed the largest absolute latent coefficients across cell types. Since persistent chronic inflammation during plaque clearance may accelerate Alzheimer’s disease pathology, I focused on the plaque-downregulating latent z15. Decoding z15 revealed enrichment of lipid metabolism and chronic inflammation pathways, suggesting its role in Alzheimer’s disease pathology.
 
+### code : https://github.com/AiJayce/Soongsil.Univ/blob/Alzheimer-Vulnerability/MERSCOPE.ipynb
 
 ## (6) Select significant genes
 
@@ -40,17 +45,24 @@ Microglia showed the largest absolute latent coefficients across cell types. Sin
 
 Genes decoded from z15 were selected based on expression density. APOE and TREM2 were retained despite sparse expression and confirmed as AD-associated genes in the literature. Both showed significantly higher expression in pHIP, suggesting increased AD vulnerability in this region.
 
+### code : https://github.com/AiJayce/Soongsil.Univ/blob/Alzheimer-Vulnerability/MERSCOPE.ipynb
+
 ##  (7) Causal Inference from CCI 
 
 <img width="1053" height="1151" alt="Predicting Hippocampal Regional Vulnerability in AD-7" src="https://github.com/user-attachments/assets/e52d7c21-bb76-4e58-a337-66a22d8cc872" />
 
 Linear regression identified a potential causal relationship between higher Oligodendrocyte density and increased TREM2 and APOE expression in Microglia.
 
+### code : https://github.com/AiJayce/Soongsil.Univ/blob/Alzheimer-Vulnerability/CCI.ipynb
+
 ## (8) CCI Reproducibility in scRNA
 
 <img width="1111" height="1155" alt="Predicting Hippocampal Regional Vulnerability in AD-8" src="https://github.com/user-attachments/assets/377a86c7-89b5-4a8a-8803-a33bef169524" />
 
 At the scRNA-seq level, NicheNet was used to infer ligand–receptor interactions. Pseudobulk analysis confirmed that significant L/R responses regulate TREM2–APOE expression within Microglia, supporting reproducibility.
+
+### code : https://github.com/AiJayce/Soongsil.Univ/blob/Alzheimer-Vulnerability/scRNA-seq.ipynb
+
 
 
 ## Discussion
