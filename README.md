@@ -1,64 +1,37 @@
 # Predicting Hippocampal Regional Vulnerability in Alzheimer's Disease
 
-## Objective
+## (1) Introduction
 
-Identify the hippocampal region and cell program most vulnerable to Alzheimer's disease by integrating spatial annotation, plaque-associated latent modeling, and cell-cell interaction analysis.
+The hippocampus exhibits distinct functions across its anterior and posterior regions. This project inferred which region is more vulnerable to AD-related functional loss.
 
-## Workflow
+## (2) Annotation and (3) Compare region specific
 
-### 1. Spatial annotation and regional comparison
+Annotation was performed at two levels: deep learning based scRNA reference label transfer with high-confidence scores, and manual CCF region mapping.
 
-The first figure defines the posterior hippocampus (pHPC; emotional and contextual processing) and anterior hippocampus (aHPC; spatial and episodic memory). The second figure maps spatial cells to an Allen Mouse Brain Atlas scRNA-seq reference and to CCF regions, creating comparable pHPC and aHPC regions in AD and wild-type samples.
+Across mapped regions, Microglia showed significantly higher populations in AD samples across all regions, suggesting a disease-associated relationship between Microglia and AD.
 
-![Posterior and anterior hippocampal regional functions](assets/01-regional-functions.png)
-![Reference label transfer and CCF mapping](assets/02-label-transfer-ccf.png)
+**Keyword:** Spatial transcriptomics, Merscope, Label transfer (SCVI), CCF mapping, Public data
 
+![Introduction, annotation, and region-specific comparison](assets/02-label-transfer-ccf.png)
 
+## (4) VAE modeling and (5) Latent decoding to gene sets
 
-The regional cell-type plots and population bars show increased microglia in AD across mapped regions, motivating microglia-centered plaque and vulnerability analysis.
+Metadata were used to quantify plaque protein size and spatial coordinates to derive a plaque score. Ridge-regularized multiple linear regression was performed between the plaque score and VAE latent dimensions. Based on this concept, latent dimensions with negative coefficients were interpreted as representing genes associated with both plaque clearance and active inflammatory responses.
 
-![Cell-type distributions and regional proportions](assets/03-regional-cell-types.png)
+Microglia showed the largest absolute latent coefficients across cell types. Since persistent chronic inflammation during plaque clearance may accelerate Alzheimer's disease pathology, I focused on the plaque-downregulating latent z15. Decoding z15 revealed enrichment of lipid metabolism and chronic inflammation pathways, suggesting its role in Alzheimer's disease pathology.
 
+**Keyword:** Variational Auto Encoder, Plaque score, Latent coefficient function, Ridge penalty, Latent decode
 
+![VAE modeling and latent decoding](assets/04-cvae-plaque-model.png)
 
-### 2. Plaque-associated latent-factor modeling
+## (6) Select significant genes, (7) Causal Inference from CCI, and (8) CCI Reproducibility in scRNA
 
-The figure shows how plaque size and nearest-cell distance are converted to a plaque score, then supplied with spatial gene expression to a conditional VAE. Ridge regression ranks latent dimensions by their association with the plaque score for each cell type.
+Genes decoded from z15 were selected based on expression density. APOE and TREM2 were retained despite sparse expression and confirmed as AD-associated genes in the literature. Both showed significantly higher expression in pHIP, suggesting increased AD vulnerability in this region.
 
-![Conditional VAE and plaque-score modeling workflow](assets/04-cvae-plaque-model.png)
+Linear regression identified a potential causal relationship between higher Oligodendrocyte density and increased TREM2 and APOE expression in Microglia. At the scRNA-seq level, NicheNet was used to infer ligand-receptor interactions. Pseudobulk analysis confirmed that significant L/R responses regulate TREM2-APOE expression within Microglia, supporting reproducibility.
 
+**Keyword:** TREM2, APOE, Alzheimer, Gaussian density, Cell-cell interaction, Linear regression, Nearest cell equation, Nichenet, Pseudobulk
 
-
-Microglia have the largest plaque-associated latent coefficients. The decoding figure contrasts plaque-upregulating and plaque-downregulating factors and highlights z15, whose decoded genes are enriched for lipid metabolism and chronic inflammatory signaling.
-
-![Latent-factor decoding and pathway enrichment](assets/05-latent-decoding.png)
-
-
-
-### 3. Regional vulnerability and cell-cell interactions
-
-The density and boxplot figure prioritizes decoded z15 genes. APOE and TREM2 were retained because of their established AD relevance and show higher expression in the posterior hippocampus, indicating greater pHPC vulnerability.
-
-![APOE and TREM2 selection and regional expression](assets/06-gene-selection.png)
-
-
-
-Nearest-cell regression links local oligodendrocyte density to microglial TREM2/APOE expression. The final figure uses NicheNet and pseudobulk correlation to reproduce ligand-receptor signals regulating this microglial program in scRNA-seq data.
-
-![Nearest-cell regression for oligodendrocyte-microglia associations](assets/07-neighbor-inference.png)
+![Significant genes, CCI causal inference, and reproducibility](assets/08-cci-reproducibility.png)
 <img width="1111" height="1155" alt="Predicting Hippocampal Regional Vulnerability in AD-8" src="https://github.com/user-attachments/assets/cd77d161-8768-4ce0-b112-2a1adff44ba0" />
-
-
-
-## Methods
-
-- Spatial transcriptomics and MERFISH data analysis
-- Reference label transfer with scVI and CCF mapping
-- Conditional variational autoencoder and ridge regression
-- Latent-space gene-set decoding and pathway enrichment
-- Nearest-cell regression, NicheNet, and pseudobulk validation
-
-## Key Finding
-
-The posterior hippocampus showed higher APOE and TREM2 expression in microglia, consistent with greater AD-related regional vulnerability and a plaque-associated chronic inflammatory program.
 
