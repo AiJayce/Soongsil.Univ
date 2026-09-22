@@ -1,46 +1,28 @@
 # Pipeline of Time-Series Pathway Identification
 
-## Objective
+## (1) Introduction and (2) Pipeline
 
-Identify biological pathways that change continuously across aging rather than only between two selected groups.
+Conventional bulk RNA-seq pathway analysis identifies DEGs through pairwise comparisons (e.g., one-vs-one or one-vs-others), followed by gene set generation and pathway enrichment analysis. However, this approach cannot effectively identify pathways with progressively increasing activity across a time series.
 
-## Analysis Workflow
+To assess the linearity of the time-series data, I constructed a Pearson correlation matrix and evaluated its eigenvalue structure. PCA further confirmed a clear temporal trajectory, with samples sequentially aligned along the principal components. This supported the use of linear equation-based modeling to characterize the temporal dynamics of the data.
 
-### 1. Why pairwise DEG analysis is insufficient
-
-Conventional bulk RNA-seq analysis first selects differentially expressed genes from pairwise contrasts and then performs pathway enrichment. As shown below, this approach finds group-specific genes but does not model whether a pathway changes progressively throughout the time course.
+**Keyword:** Bulk RNAseq, DEG, DESeq2, Pathway enrichment, Linearity, Linear algebra, Public data
 
 ![Volcano plot and conventional pathway analysis limitation](assets/01-conventional-analysis-limitation.png)
 
-### 2. Prepare counts and confirm a temporal trajectory
+## (3) Pipeline and (4) Validation
 
-Raw count matrices were normalized with DESeq2. The PCA and sample-to-sample Pearson correlation matrix in the figure show that samples follow an ordered young-to-aged trajectory, providing the basis for a linear time-series model.
+Gene expression was modeled using linear regression across time points, and genes with residuals below the 75 percentile were retained. By modeling positive and negative slopes separately, two temporally linear gene sets were generated, representing progressively upregulated and downregulated genes, respectively.
 
-![DESeq2 preprocessing, PCA, and sample correlation across time points](assets/02-preprocess-and-linearity.png)
+The resulting gene sets were validated by calculating pathway enrichment scores and comparing them with previously reported aging-associated pathways. Successful reproduction of known aging-related pathways demonstrated the validity of the proposed approach, supporting a novel methodology for constructing pathways through temporal modeling rather than conventional DEG-based analysis.
 
-### 3. Select genes with linear temporal behavior
+Positive slope by time : Young -> Aged pathway  
+Negative slope by time : Young pathway  
+Residual =< 0.602 (quantile 75%)
 
-Each gene was fitted with simple linear regression across time points. Genes with residuals at or below the 75th-percentile threshold were retained as well-described linear trajectories. The slope separated increasing programs from decreasing programs.
+**Keyword:** Bulk RNAseq, Geneset modeling, Pathway enrichment, Linearity, Linear algebra, Validation
 
-![Positive and negative temporal trajectories, linear model, and residual threshold](assets/03-linear-regression.png)
-
-### 4. Test the resulting pathway programs
-
-The positive-slope gene set was enriched toward aged samples, while the negative-slope gene set was enriched toward young samples. Pathway analysis recovered expected immune and inflammation, epigenetic modification, fertilization, and cell-cycle programs, validating the time-series approach.
-
-![Enrichment-score and pathway-level validation of slope-based gene sets](assets/04-validation.png)
-
-## Methods
-
-- Bulk RNA-seq preprocessing with DESeq2
-- Pearson correlation and principal-component analysis
-- Simple linear regression and residual filtering
-- Positive- and negative-slope gene-set construction
-- Gene-set enrichment and pathway validation
-
-## Key Finding
-
-Temporal linear modeling recovered biologically relevant age-associated pathways that are difficult to capture with conventional pairwise DEG-based pathway analysis.
+![Linear regressor modeling and validation](assets/04-validation.png)
 
 
 
