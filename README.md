@@ -1,4 +1,4 @@
-<img width="546" height="95" alt="image" src="https://github.com/user-attachments/assets/dabdb020-2e35-4613-8436-a26468b76ff7" />
+<img width="1000" height="200" alt="image" src="https://github.com/user-attachments/assets/dabdb020-2e35-4613-8436-a26468b76ff7" />
 
 # Master’s Degree Projects
 
