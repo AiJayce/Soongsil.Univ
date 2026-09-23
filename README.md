@@ -1,3 +1,5 @@
+<img width="546" height="95" alt="image" src="https://github.com/user-attachments/assets/dabdb020-2e35-4613-8436-a26468b76ff7" />
+
 # Master’s Degree Projects
 
 This page summarizes the code and project stories from the six projects I conducted during my master’s degree program from September 1, 2024 to August 31, 2026.
