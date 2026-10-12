@@ -126,6 +126,9 @@ Previous studies reporting S100a8 expression in aged CD8 T cells were conducted 
 
 Pathway analysis revealed that stronger Tlr4–S100a8 interactions between Luminal Epithelium and CD8 T cells were associated with increased Mxd1 expression in receptor cells, potentially distinguishing receptive from non-receptive states and thereby influencing implantation outcomes.
 These findings demonstrate that the results obtained from mouse-level analyses are reproducible in human-level analyses, supporting the biological relevance of the proposed regulatory interactions and the validity of the analytical approach.
+
+### code : https://github.com/AiJayce/Soongsil.Univ/blob/Uterus-Aging/Oval%20-%20Human/Human_sc.ipynb
+
 ## Discussion
 
 ### Data and analysis context
