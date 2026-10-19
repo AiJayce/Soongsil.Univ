@@ -15,7 +15,7 @@ The data were obtained from publicly available datasets, and preprocessing was p
 ## (3) Data preprocess
 
 ### NGS data preprocess
-<img width="4315" height="2278" alt="그림3" src="https://github.com/user-attachments/assets/cc957c4a-b8ea-4be9-80ed-e0209c7cd955" />
+<img width="4339" height="2216" alt="그림2" src="https://github.com/user-attachments/assets/3f1077a0-37b9-4fde-9c48-fd666a6fb69a" />
 
 During NGS preprocessing and quality control (QC), some abnormalities were observed in the FastQC reports. However, these findings were considered potentially attributable to technical biases and the characteristics of the RNA-seq data rather than necessarily indicating poor data quality.
 
@@ -35,7 +35,7 @@ After alignment, the proportions of forward and reverse reads were examined. The
 
 ### Read count preprocess
 
-<img width="1554" height="1155" alt="Pipeline of Time-Series Pathway Identification-2" src="https://github.com/user-attachments/assets/2f6dac59-5209-40f0-a1bd-fc4f8613aeab" />
+<img width="1554" height="517" alt="12" src="https://github.com/user-attachments/assets/8100ccdc-fae4-4bb3-8499-c177257594e5" />
 <img width="4403" height="1681" alt="그림4" src="https://github.com/user-attachments/assets/29b84269-805c-48e6-9bfb-b3e419e19490" />
 
 Raw read counts obtained after alignment cannot be directly compared across samples because of differences in sequencing depth, library size, and gene expression variability. RNA-seq count data typically exhibit a mean–variance relationship in which highly expressed genes have greater variance than lowly expressed genes. Therefore, normalization and variance stabilization are essential for reliable sample comparisons and downstream analyses.
